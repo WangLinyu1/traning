@@ -1,0 +1,74 @@
+body{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+
+}
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+}
+.container {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+input[type=text]{
+  width:90%;
+  padding:5px;
+  margin-bottom:20px;
+}
+input[type=submit]{
+  margin-top:20px;
+  width:100%;
+}
+
+
+.card{
+  font-size: 25px;
+}
+
+i{
+  margin-bottom:20px;  
+    
+}
+
+.fa-shopping-cart{
+  margin-top: 20px;
+}
+a{
+  text-decoration:none;
+  color: dodgerblue;
+}
+.right{
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+}
+.col-75{
+  width:74%;
+  
+}
+.inner{
+  width:90%;
+  
+}
+
+
+
+.col-50{
+  width:50%;
+  
+  
+}
+.col-25{
+  margin-left:1%;;
+  width:25%;
+ 
+}
+
+
+

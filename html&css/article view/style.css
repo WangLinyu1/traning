@@ -1,0 +1,11 @@
+body{
+  height: 200px;
+  border: gray solid
+  
+}
+img{
+    margin:5px;
+	float: left;
+	height: 95%;
+	margin-right: 10px;
+}

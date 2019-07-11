@@ -1,0 +1,26 @@
+body{
+  margin:auto;
+  padding:0;
+}
+nav{
+	background-color: gray;
+	color: white;
+}
+ul{
+	display: flex;
+    padding:0;
+	list-style-type: none;	
+}
+li{
+	margin: 10px;
+}
+.green{
+	background-color: green;
+}
+i{
+  margin:5px;
+  color:white;
+}
+
+
+
