@@ -15,7 +15,7 @@ let input = [{
 function sleep(time){
   var start = new Date().getTime()
   var end = new Date().getTime()
-  while (end-start!= time){
+  while (end-start< time){
     end = new Date().getTime()
   }
   return 

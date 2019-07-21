@@ -194,7 +194,7 @@ let input = [{
 function sleep(time){
   var start = new Date().getTime()
   var end = new Date().getTime()
-  while (end-start!= time){
+  while (end-start< time){
     end = new Date().getTime()
   }
   return 
@@ -230,7 +230,7 @@ printTasks(input)
 //     setTimeout(function(){
 //       console.log("time used to print",value,":",time/1000,"s")
 //           x++
-//       print(list)
+//       print2(list)
 
 //     },time)
       
