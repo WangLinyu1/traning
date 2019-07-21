@@ -21,7 +21,7 @@ function print2(list){
 		setTimeout(function(){
 			console.log("time used to print",value,":",time/1000,"s")
     			x++
-    	print(list)
+    	print2(list)
 
 		},time)
     	
