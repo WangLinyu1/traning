@@ -220,6 +220,27 @@ function printTasks(list) {
 printTasks(input)
 
 
+// second method for question7 
+// x = 0
+// function print2(list){
+//   if(x<list.length){
+//     i = list[x]
+//     var value = i["Value"], time = i["Time"]
+
+//     setTimeout(function(){
+//       console.log("time used to print",value,":",time/1000,"s")
+//           x++
+//       print(list)
+
+//     },time)
+      
+//   }
+// }
+
+// print2(input)
+
+
+
 // question4 debounce function
 
 console.log("question4 implement debounce function")
