@@ -1,0 +1,11 @@
+#progress{
+	width: 100%;
+	background-color: lightgrey;
+
+}
+#bar{
+	width: 0.1%;
+	height: 20px;
+	/*background-color: green*/
+	background-image: linear-gradient(to right, #81D9FD , #C2A4FA);
+}
