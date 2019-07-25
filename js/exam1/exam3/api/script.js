@@ -27,10 +27,9 @@ function match(){
 	  			people.push(i["name"])
 	  		}
 	  		// load_name()
-	  		if(obj["next"]!=null){
-	  			basic_url = obj["next"]
-	  			load_name()
-	  		}
+	  		
+	  		load_name()
+	  		
 
   		}
 	)
@@ -60,23 +59,5 @@ function load_name(){
 
 
 
-
-
-// // var states = new Bloodhound({
-// //   datumTokenizer: Bloodhound.tokenizers.whitespace,
-// //   queryTokenizer: Bloodhound.tokenizers.whitespace,
-// //   // `states` is an array of state names defined in "The Basics"
-// //   local: states
-// // });
-
-// // $('#bloodhound .typeahead').typeahead({
-// //   hint: true,
-// //   highlight: true,
-// //   minLength: 1
-// // },
-// // {
-// //   name: 'states',
-// //   source: states
-// // });
 
 
