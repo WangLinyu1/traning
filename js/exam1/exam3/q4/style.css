@@ -1,11 +1,16 @@
 .container{
 	display: flex;
-	width: 80%;
-	justify-content: center;
+	width: 600px;
 
 }
 .cell{
 	background-color: black;
 	flex:1;
+	height: 200px;
 	border:white solid 1px;
+}
+body{
+	display: flex;
+	background-color: lightgrey;
+	justify-content: center;
 }

@@ -6,12 +6,10 @@
 
 </head>
 <body>
-	<div id="bloodhound">
-  		<input name = "SW" class="typeahead" type="text" placeholder="star war charactor">
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+  	<input type="text" list="data" onkeyup="match(this.value)" placeholder="star war charactor"> 
+  	<datalist class="datalist" id = "data"> 
+	<datalist>
+</body>
 <script type="text/javascript" src="script.js"></script>
 
-</body>
 </html>

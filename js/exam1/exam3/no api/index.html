@@ -2,24 +2,14 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
 
 </head>
 <body>
-	<div >
-		<input type="text" list="datalist" onkeyup="autocomplete(this.value)" placeholder="states of USA"> 
-	  	<datalist id="datalist"> 
-	  	<option value="CA"></option> 
-	  	<option value="AZ"></option> 
-	  	<option value="WA"></option> 
-	  	<option value="NY"></option> 
-	  	<option value="OR"></option> 
-	  	<option value="TX"></option> 
-	  	<option value="TS"></option> 
-	  	<option value="ML"></option> 
-	  	<option value="MX"></option> 
-		<datalist>
+	<input type="text" list="data" onkeyup="match(this.value)" placeholder="states of USA"> 
+  	<datalist class="datalist" id = "data"> 
+	<datalist>
 
 </body>
+<script type="text/javascript" src="script.js" ></script>
 
 </html>

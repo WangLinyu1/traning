@@ -1,9 +1,9 @@
-#progress{
+.progress{
 	width: 100%;
 	background-color: lightgrey;
 
 }
-#bar{
+.bar{
 	width: 0.1%;
 	height: 20px;
 	/*background-color: green*/

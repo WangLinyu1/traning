@@ -121,16 +121,16 @@ console.log()
 //   []
 // ))
 
-// var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
-// console.log(names.my_reduce(function (allNames, name) { 
-//   if (name in allNames) {
-//     allNames[name]++;
-//   }
-//   else {
-//     allNames[name] = 1;
-//   }
-//   return allNames;
-// }, {}))
+var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+console.log(names.my_reduce(function (allNames, name) { 
+  if (name in allNames) {
+    allNames[name]++;
+  }
+  else {
+    allNames[name] = 1;
+  }
+  return allNames;
+}, {}))
 
 
 
