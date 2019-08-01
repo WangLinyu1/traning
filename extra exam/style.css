@@ -1,0 +1,21 @@
+.container{
+	display: flex;
+	justify-content: center;
+	
+}
+.board{
+	width: 500px;
+	height: 500px;
+	/*width: 100%;*/
+	height: auto;
+}
+.cell{
+	flex:1;
+	height: 100px;
+	border: solid 0.5px lightgrey;
+
+}
+
+.row{
+	display: flex;
+}
