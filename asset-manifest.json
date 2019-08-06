@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/WangLinyu1/traning/tree/master/react/static/css/main.2cce8147.chunk.css",
-    "main.js": "/WangLinyu1/traning/tree/master/react/static/js/main.92c405f1.chunk.js",
-    "main.js.map": "/WangLinyu1/traning/tree/master/react/static/js/main.92c405f1.chunk.js.map",
-    "runtime~main.js": "/WangLinyu1/traning/tree/master/react/static/js/runtime~main.6e1caf58.js",
-    "runtime~main.js.map": "/WangLinyu1/traning/tree/master/react/static/js/runtime~main.6e1caf58.js.map",
-    "static/js/2.b41502e9.chunk.js": "/WangLinyu1/traning/tree/master/react/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/WangLinyu1/traning/tree/master/react/static/js/2.b41502e9.chunk.js.map",
-    "index.html": "/WangLinyu1/traning/tree/master/react/index.html",
-    "precache-manifest.2f5a0a4f6949fbbc0101041aea668786.js": "/WangLinyu1/traning/tree/master/react/precache-manifest.2f5a0a4f6949fbbc0101041aea668786.js",
-    "service-worker.js": "/WangLinyu1/traning/tree/master/react/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/WangLinyu1/traning/tree/master/react/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/WangLinyu1/traning/tree/master/react/static/media/logo.5d5d9eef.svg"
+    "main.css": "/traning/static/css/main.2cce8147.chunk.css",
+    "main.js": "/traning/static/js/main.cbb04f3e.chunk.js",
+    "main.js.map": "/traning/static/js/main.cbb04f3e.chunk.js.map",
+    "runtime~main.js": "/traning/static/js/runtime~main.ef53709a.js",
+    "runtime~main.js.map": "/traning/static/js/runtime~main.ef53709a.js.map",
+    "static/js/2.b41502e9.chunk.js": "/traning/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/traning/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/traning/index.html",
+    "precache-manifest.18870aa4fbeec8f73e9097fea78368fd.js": "/traning/precache-manifest.18870aa4fbeec8f73e9097fea78368fd.js",
+    "service-worker.js": "/traning/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/traning/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/traning/static/media/logo.5d5d9eef.svg"
   }
 }
