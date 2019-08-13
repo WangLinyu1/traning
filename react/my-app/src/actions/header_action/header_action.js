@@ -13,4 +13,16 @@ const CloseRightMenu = () => {
   };
 };
 
-export default {ShowRightMenu, CloseRightMenu};
+const ShowSubList = (event) =>{
+  return{
+    type:Action.SHOW_SUBLIST,
+  };
+}
+
+const CloseSubList = () =>{
+  return{
+    type:Action.CLOSE_SUBLIST,
+  };
+}
+
+export default {ShowRightMenu, CloseRightMenu,ShowSubList,CloseSubList};

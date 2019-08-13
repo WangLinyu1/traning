@@ -161,6 +161,12 @@ iframe {
   padding: 0px;
   color: #fff;
 }
+.drawerHeader {
+  display: 'flex';
+  alignItems: 'center';
+  padding: '0 8px';
+  justifyContent: 'flex-end';
+}
 .left_border {
   color: #fff;
   padding: 5px;

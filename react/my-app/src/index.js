@@ -26,6 +26,6 @@ ReactDOM.render(<Provider store = {store}><App /></Provider>, document.getElemen
 // 	}
 //   )
 // ;
-
+// cd /mnt/c/Users/49125/OneDrive/桌面/traning/react/my-app
 
 serviceWorker.register();

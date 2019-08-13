@@ -1,29 +1,60 @@
+
 import React from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import Divider from '@material-ui/core/Divider';
-// import { NavLink } from 'react-router-dom';
-import * as Icons from '@material-ui/icons';
-import {connect} from 'react-redux';
+import Drawer from '@material-ui/core/Drawer';
 
-class DynamicSideBar extends React.Component
-{
-    loop_list(content){
-        let output = [];
-        for( let i in content)
-        {
-            output.push(this.renderNavItem(content[i]));
+const drawerWidth = 240;
 
-        }
-        return(
-            <div>
-                {output}
-            </div>
+
+class DynamicSideBar extends React.Component(){
+    
+    handleDrawerOpen() {
+        setOpen(true);
+      }
+
+    handleDrawerClose() {
+        setOpen(false);
+      }
+    
+    render(){
+        const [open, setOpen] = React.useState(false);
+        return (
+            <Drawer
+        className={classes.drawer}
+        variant="persistent"
+        anchor="left"
+        open={open}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+      <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+          </IconButton>
+        </div>
+        <Divider />
+        <List>
+          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
         )
+        
     }
+
 }
 
 export default DynamicSideBar
