@@ -1,22 +1,10 @@
 import React from 'react';
-import {  Icons,Table, Button } from '../componets/';
-// import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-
-const Icon = Icons.AccessAlarm;
-
+import Header from "./header/Header.js"
 
 function App() {
   return (
     <div className="App">
-      <Icon/>
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-      <Table>
-        A
-        B
-        C
-      </Table>
+      <Header/>
     </div>
   );
 }
