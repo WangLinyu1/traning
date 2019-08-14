@@ -5,7 +5,6 @@ const initState = {
   expand:false,
   anchorEl : null,
   rightContent: Data.rightMenu,
-  navItems: Data.navItems
   
 }
 console.log(initState.navItems)

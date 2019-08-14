@@ -1,9 +1,7 @@
 import React from "react"
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { NavLink } from 'react-router-dom';
 import HomeIcon from '../../assets/images/home.png';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -12,19 +10,11 @@ import Avatar from '@material-ui/core/Avatar';
 import LaunchIcon from '@material-ui/icons/Launch';
 import {connect} from 'react-redux';
 import HomeAction from '../../actions/header_action/header_action.js';
-// import DynamicSideBar from '../nav/side_bar.js'
+import NavBar from '../nav/nav_bar.js'
 import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 
 
@@ -58,37 +48,7 @@ class Header extends React.Component
           </div>
         )
     }
-    sublist(content){
-      let L = [];
-      for(let i in content){
-        L.push(<a href={content[i].url} key = {content[i].label}target="_blank" rel="noopener noreferrer"><ListItem key = {content[i].label}>{content[i].label}</ListItem></a>);
-      
-      }
-      console.log(L)
-      return(
-          <List>
-          {L}
-          </List>
-
-      ) 
-    }
-    looplist(content){
-      let L = [];
-      for(let i in content){
-        L.push(<a href={content[i].url} key = {content[i].label}target="_blank" rel="noopener noreferrer"><ListItem key = {content[i].label}>{content[i].label}</ListItem></a>);
-        console.log()
-        if(content[i].subNavItems){
-          
-        }
-      }
-      console.log(L)
-      return(
-          <List>
-          {L}
-          </List>
-
-      ) 
-    }
+    
     
     
     render(){
@@ -97,8 +57,6 @@ class Header extends React.Component
         const { expand } = this.props;
         const { navItems } = this.props;
         let output = this.loopMenu(rightContent);
-        let nav_list = this.loopMenu(navItems)
-        console.log(nav_list)
         // let nav_list = this.loopMenu()
         return (
             <div className = "root">
@@ -111,9 +69,7 @@ class Header extends React.Component
                 <div className = "home-icon">
                     <Avatar src = {HomeIcon} />
                 </div>
-                <div className = "left_border title_color">
-                    <h2>system design</h2>
-                </div>
+                
                 <div className = "rightMenuButton">
                   <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
                     <LaunchIcon />
@@ -126,9 +82,9 @@ class Header extends React.Component
 
                 <Drawer  className = " drawerHeader" open={Boolean(expand)} variant="persistent">
                   <IconButton onClick={this.handleDrawerClose}>
-                    <ChevronRightIcon />
+                    <ChevronLeftIcon />
                   </IconButton>
-                  {nav_list}
+                    <NavBar/>
                 </Drawer>
 
               </Toolbar>
@@ -148,7 +104,6 @@ const mapStateToProps = (state) =>{
       anchorEl: state.headerReducer.anchorEl,
       rightContent: state.headerReducer.rightContent,
       expand: state.headerReducer.expand,
-      navItems:state.headerReducer.navItems
     }
   }
   
