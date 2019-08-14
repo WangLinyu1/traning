@@ -176,15 +176,15 @@ const navItems = [
 
 const rightMenu = [
   {
-    name: 'Material-UI',
+    label: 'Material-UI',
     link: 'https://material-ui.com/'
   },
   {
-    name: 'React',
+    label: 'React',
     link: 'https://reactjs.org/'
   },
   {
-    name: 'React-Vis',
+    label: 'React-Vis',
     link: 'https://github.com/uber/react-vis'
   },
 ];

@@ -6,7 +6,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import * as Icons from '@material-ui/icons';
 import NavAction from '../../actions/NavAction/navAction.js';
-import { NavLink } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import {connect} from 'react-redux';
 

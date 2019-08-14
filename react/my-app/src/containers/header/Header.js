@@ -55,9 +55,8 @@ class Header extends React.Component
         const { anchorEl } = this.props;
         const { rightContent } = this.props;
         const { expand } = this.props;
-        const { navItems } = this.props;
         let output = this.loopMenu(rightContent);
-        // let nav_list = this.loopMenu()
+        console.log(output)
         return (
             <div className = "root">
               
