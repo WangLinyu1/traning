@@ -6,33 +6,41 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import * as Icons from '@material-ui/icons';
 import NavAction from '../../actions/NavAction/navAction.js';
+import { NavLink } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import {connect} from 'react-redux';
+
 
 class NavBar extends React.Component{
     openSubList(oneState,bool){
         this.props.showSublist(oneState,bool);
     }
+    resetTabView = () =>{
+      this.props.resetValue();
+    };
+   
 
     renderNavItem(node)
     {
       const MyIcon = Icons[node.icon];
       if(node.subNavItems)
       {
-        let listItems = this.loopSubItems(node.subNavItems);
+        let listItems = this.listLoop(node.subNavItems);
         const expand = this.props.state[node.label] === undefined
                   ? window.location.hash.indexOf(node.url) > -1
                   : this.props.state[node.label];
         this.props.setState(node.label,expand);
           return(
             <div key = {node.label}>
+            <NavLink exact = {node.url === '/'} to={node.url} activeClassName="on-click">
               <ListItem button onClick={()=>{this.openSubList(node.label,expand)}}>
                 <ListItemIcon>
                   <MyIcon />
                 </ListItemIcon>
-                <ListItemText inset primary={node.label} />
+                <ListItemText primary={node.label} />
                 {expand?<Icons.ExpandLess/> : <Icons.ExpandMore/>}
               </ListItem>
+              </NavLink>
               <Divider />
               <Collapse in={expand} timeout="auto" unmountOnExit>
               <List component="div">
@@ -47,12 +55,14 @@ class NavBar extends React.Component{
       {
         return(
           <div key={node.label}>
+            <NavLink exact = {node.url === '/'} to={node.url} activeClassName="on-click">
               <ListItem button onClick = {this.resetTabView}>
                 <ListItemIcon>
                   <MyIcon />
                 </ListItemIcon>
                 <ListItemText primary={node.label} />
               </ListItem>
+              </NavLink>
             <Divider />
           </div>
         );
@@ -73,16 +83,7 @@ class NavBar extends React.Component{
         </div>
       );
     }
-  
-    loopSubItems(list)
-    {
-      let listItems = []
-      for(let i in list)
-        {
-          listItems.push(this.renderNavItem(list[i]));
-        }
-      return listItems;
-    }
+    
     render()
     {
       const { data } = this.props;
@@ -105,7 +106,7 @@ class NavBar extends React.Component{
     return{
       showSublist: (oneState) => {dispatch(NavAction.ShowSublist(oneState))},
       setState: (oneState,bool) => {dispatch(NavAction.SetState(oneState, bool))},
-    //   resetValue: () => {dispatch(TempleteAction.ResetValue())}
+      resetValue: () => {dispatch(NavAction.ResetValue())}
     }
   }
   

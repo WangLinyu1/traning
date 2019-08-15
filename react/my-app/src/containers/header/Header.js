@@ -56,7 +56,6 @@ class Header extends React.Component
         const { rightContent } = this.props;
         const { expand } = this.props;
         let output = this.loopMenu(rightContent);
-        console.log(output)
         return (
             <div className = "root">
               
@@ -79,10 +78,10 @@ class Header extends React.Component
                 </Menu>
 
 
-                <Drawer  className = " drawerHeader" open={Boolean(expand)} variant="persistent">
-                  <IconButton onClick={this.handleDrawerClose}>
+                <Drawer  className = " drawerHeader" open={Boolean(expand)} onClose = {this.handleDrawerClose}>
+                  {/* <IconButton onClick={this.handleDrawerClose}>
                     <ChevronLeftIcon />
-                  </IconButton>
+                  </IconButton> */}
                     <NavBar/>
                 </Drawer>
 

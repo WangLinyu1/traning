@@ -14,6 +14,18 @@ const SetState = (oneState,bool) =>{
     bool: bool
   };
 };
+const SwitchTabs = (event, value) =>{
+  return{
+    type: Action.SWITCH_TABS,
+    event: event,
+    value: value
+  };
+};
 
+const ResetValue = () =>{
+  return{
+    type: Action.RESET_TABS_VALUE
+  };
+};
 
-export default {ShowSublist, SetState};
+export default {ShowSublist, SetState,SwitchTabs, ResetValue};

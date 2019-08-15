@@ -3,9 +3,9 @@ import Paper from '@material-ui/core/Paper';
 
 class MyHome extends React.Component
 {
-	return (
-
-		<Paper className = "home" elevation = {20}>
+  render(){
+    return (
+      <div>
         <div>
         <h1 className = "title">Welcome</h1>
         </div>
@@ -21,9 +21,9 @@ class MyHome extends React.Component
           <br/>
           <h1>React-vis is a React visualization library. React-vis components are designed to work just like other React components. If you can work with React components, you can work with React-Vis.</h1>
         </div>
-      </Paper>
-		)
-
+      </div>
+    )
+  }
 }
 
 export default MyHome
