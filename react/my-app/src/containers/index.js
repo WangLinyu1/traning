@@ -7,6 +7,7 @@ import { Route, Switch, HashRouter} from 'react-router-dom';
 
 import MyHome from '../components/content/Home/home.js';
 import MyColor from '../components/content/Colors/colors.js';
+import MyAvatar from '../components/content/Components/Avatar/avatar.js';
 
 
 
@@ -28,6 +29,9 @@ class App extends React.Component
           <Route path = "/" component = {MyHome}  key = "/home" exact/>
           <Route path = "/my-app" component = {MyHome} key = "/my-app" exact/>
           <Route path = "/colors" component = {MyColor} key = "/colors"/>
+          <Route path = "/components/avatar" component = {MyAvatar} key = "/components/avatar"/>
+
+         
          </Switch>
          </div>
       </div>
