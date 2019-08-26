@@ -12,9 +12,11 @@ import {connect} from 'react-redux';
 import HomeAction from '../../actions/header_action/header_action.js';
 import NavBar from '../nav/nav_bar.js'
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ListItem from '@material-ui/core/ListItem';
+import Typography from '@material-ui/core/Typography';
+
+// import List from '@material-ui/core/List';
+// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+// import ListItem from '@material-ui/core/ListItem';
 
 
 
@@ -58,8 +60,7 @@ class Header extends React.Component
         let output = this.loopMenu(rightContent);
         return (
             <div className = "root">
-              
-            <AppBar>
+            <AppBar className = "appbar">
               <Toolbar className = "toolbar" >
               <IconButton edge="start"  color="inherit" aria-label="menu" onClick={this.handleDrawerOpen}>
                 <MenuIcon />
@@ -67,7 +68,9 @@ class Header extends React.Component
                 <div className = "home-icon">
                     <Avatar src = {HomeIcon} />
                 </div>
-                
+                <Typography variant="h6" className = "grow">
+                  <span className = "titleColor">Design Reference</span>
+                </Typography>
                 <div className = "rightMenuButton">
                   <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
                     <LaunchIcon />
@@ -77,18 +80,15 @@ class Header extends React.Component
                     {output}
                 </Menu>
 
-
-                <Drawer  className = " drawerHeader" open={Boolean(expand)} onClose = {this.handleDrawerClose}>
-                  {/* <IconButton onClick={this.handleDrawerClose}>
-                    <ChevronLeftIcon />
-                  </IconButton> */}
-                    <NavBar/>
-                </Drawer>
-
               </Toolbar>
               
             </AppBar>
-            
+            <Drawer  className = " drawerHeader" open={Boolean(expand)} onClose = {this.handleDrawerClose}>
+              {/* <IconButton onClick={this.handleDrawerClose}>
+                <ChevronLeftIcon />
+              </IconButton> */}
+                <NavBar/>
+            </Drawer>
   
             
         </div>

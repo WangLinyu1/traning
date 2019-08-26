@@ -5,7 +5,7 @@ class MyHome extends React.Component
 {
   render(){
     return (
-      <div>
+      <Paper className = "home" elevation = {20}>
         <div>
         <h1 className = "title">Welcome</h1>
         </div>
@@ -21,7 +21,7 @@ class MyHome extends React.Component
           <br/>
           <h1>React-vis is a React visualization library. React-vis components are designed to work just like other React components. If you can work with React components, you can work with React-Vis.</h1>
         </div>
-      </div>
+      </Paper>
     )
   }
 }
